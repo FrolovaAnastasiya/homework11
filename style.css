@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 1200px;
+  min-height: 100vh;
+  background-color: rgba(175, 174, 174, 0.863);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.title {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style-type: none;
+}
+
+.button {
+  font-size: 20px;
+  color: rgb(244, 244, 244);
+  border: none;
+  background-color: rgb(112, 228, 112);
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition-property: background-color, color, transform;
+  transition-duration: 200ms;
+}
+
+.button:hover {
+  background-color: rgba(200, 255, 0, 0.507);
+  color: rgb(0, 0, 0);
+  transform: scale(1.3, 1.3);
+}
+
+.main {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+.main_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+}
+
+.main_item {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(105, 5, 199);
+  color: rgb(244, 244, 244);
+  font-size: 20px;
+  transition-property: transform;
+  transition-duration: 1500ms;
+}
+
+.main_item:hover {
+  transform: rotate(180deg);
+}
+
+.animated_ball {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  background-color: rgb(138, 43, 226);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  animation-name: jump;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.animated_ball:hover {
+  animation-play-state: paused;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0vw, 10px);
+  }
+  10% {
+    transform: translate(8vw, 40px);
+    background-color: rgb(43, 174, 226);
+  }
+  20% {
+    transform: translate(16vw, 10px);
+    background-color: rgb(226, 125, 43);
+  }
+  30% {
+    transform: translate(24vw, 40px);
+    background-color: rgb(26, 241, 62);
+  }
+  40% {
+    transform: translate(32vw, 10px);
+    background-color: rgb(226, 43, 165);
+  }
+  50% {
+    transform: translate(40vw, 40px);
+    background-color: rgb(221, 96, 102);
+  }
+  60% {
+    transform: translate(48vw, 10px);
+    background-color: rgb(226, 223, 43);
+  }
+  70% {
+    transform: translate3D(56vw, 40px, 0);
+    background-color: rgb(18, 187, 26);
+  }
+  80% {
+    transform: translate(64vw, 10px);
+    background-color: rgb(223, 204, 185);
+  }
+  90% {
+    transform: translate(74vw, 40px);
+    background-color: rgb(63, 18, 187);
+  }
+  100% {
+    transform: translate(84vw, 10px);
+    background-color: rgb(159, 18, 187);
+  }
+}
